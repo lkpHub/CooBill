@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73E3AD1B7233B58B242CCCF5 /* Pods_CooBill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED468137BB2DD43CBE3FD5FC /* Pods_CooBill.framework */; };
+		84F17DDA1EB970B300481237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DD91EB970B300481237 /* main.m */; };
+		84F17DE51EB970B300481237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F17DE41EB970B300481237 /* Assets.xcassets */; };
+		84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DF41EB971DE00481237 /* AppDelegate.m */; };
+		84F17DF81EB9721000481237 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DF71EB9721000481237 /* MainViewController.m */; };
+		84F17E011EB9838E00481237 /* PasswordLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17E001EB9838E00481237 /* PasswordLoginViewController.m */; };
+		84F17E041EB9854B00481237 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17E031EB9854B00481237 /* RegisterViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		31301ECA6578C7401709F522 /* Pods-CooBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CooBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CooBill/Pods-CooBill.debug.xcconfig"; sourceTree = "<group>"; };
+		84D4B1231EBC77DB00FA02FB /* MacroHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
+		84F17DD51EB970B300481237 /* CooBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CooBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F17DD91EB970B300481237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84F17DE41EB970B300481237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84F17DE91EB970B300481237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F17DF31EB971DE00481237 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84F17DF41EB971DE00481237 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84F17DF61EB9721000481237 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		84F17DF71EB9721000481237 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		84F17DF91EB973DA00481237 /* CooBill-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CooBill-Prefix.pch"; sourceTree = "<group>"; };
+		84F17DFA1EB9747500481237 /* ClassHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassHeader.h; sourceTree = "<group>"; };
+		84F17DFF1EB9838E00481237 /* PasswordLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordLoginViewController.h; sourceTree = "<group>"; };
+		84F17E001EB9838E00481237 /* PasswordLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordLoginViewController.m; sourceTree = "<group>"; };
+		84F17E021EB9854B00481237 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		84F17E031EB9854B00481237 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		C342B5305451836822FECE0D /* Pods-CooBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CooBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-CooBill/Pods-CooBill.release.xcconfig"; sourceTree = "<group>"; };
+		ED468137BB2DD43CBE3FD5FC /* Pods_CooBill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CooBill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F17DD21EB970B300481237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E3AD1B7233B58B242CCCF5 /* Pods_CooBill.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		699DD547CC07BB69369AC233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED468137BB2DD43CBE3FD5FC /* Pods_CooBill.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FA8CBDB2636735FEF97F6E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31301ECA6578C7401709F522 /* Pods-CooBill.debug.xcconfig */,
+				C342B5305451836822FECE0D /* Pods-CooBill.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84D4B1271EC0923300FA02FB /* Resource(资源) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Resource(资源)";
+			sourceTree = "<group>";
+		};
+		84F17DCC1EB970B300481237 = {
+			isa = PBXGroup;
+			children = (
+				84F17DD71EB970B300481237 /* CooBill */,
+				84F17DD61EB970B300481237 /* Products */,
+				6FA8CBDB2636735FEF97F6E9 /* Pods */,
+				699DD547CC07BB69369AC233 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84F17DD61EB970B300481237 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F17DD51EB970B300481237 /* CooBill.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F17DD71EB970B300481237 /* CooBill */ = {
+			isa = PBXGroup;
+			children = (
+				84F17DEF1EB971C600481237 /* Classes(界面) */,
+				84F17DF01EB971CE00481237 /* Custom(自定义) */,
+				84F17DF11EB971D700481237 /* Header(头文件) */,
+				84F17DF21EB971DE00481237 /* Other(其他) */,
+				84D4B1271EC0923300FA02FB /* Resource(资源) */,
+				84F17DD81EB970B300481237 /* Supporting Files */,
+			);
+			path = CooBill;
+			sourceTree = "<group>";
+		};
+		84F17DD81EB970B300481237 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84F17DE41EB970B300481237 /* Assets.xcassets */,
+				84F17DE91EB970B300481237 /* Info.plist */,
+				84F17DD91EB970B300481237 /* main.m */,
+				84F17DF91EB973DA00481237 /* CooBill-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84F17DEF1EB971C600481237 /* Classes(界面) */ = {
+			isa = PBXGroup;
+			children = (
+				84F17DF61EB9721000481237 /* MainViewController.h */,
+				84F17DF71EB9721000481237 /* MainViewController.m */,
+				84F17DFB1EB9826C00481237 /* OtherView(其他界面) */,
+			);
+			path = "Classes(界面)";
+			sourceTree = "<group>";
+		};
+		84F17DF01EB971CE00481237 /* Custom(自定义) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom(自定义)";
+			sourceTree = "<group>";
+		};
+		84F17DF11EB971D700481237 /* Header(头文件) */ = {
+			isa = PBXGroup;
+			children = (
+				84F17DFA1EB9747500481237 /* ClassHeader.h */,
+				84D4B1231EBC77DB00FA02FB /* MacroHeader.h */,
+			);
+			path = "Header(头文件)";
+			sourceTree = "<group>";
+		};
+		84F17DF21EB971DE00481237 /* Other(其他) */ = {
+			isa = PBXGroup;
+			children = (
+				84F17DF31EB971DE00481237 /* AppDelegate.h */,
+				84F17DF41EB971DE00481237 /* AppDelegate.m */,
+			);
+			path = "Other(其他)";
+			sourceTree = "<group>";
+		};
+		84F17DFB1EB9826C00481237 /* OtherView(其他界面) */ = {
+			isa = PBXGroup;
+			children = (
+				84F17DFC1EB9826C00481237 /* GuideView(引导界面) */,
+				84F17DFD1EB9826C00481237 /* Login(登陆) */,
+				84F17DFE1EB9826C00481237 /* Register(注册) */,
+			);
+			path = "OtherView(其他界面)";
+			sourceTree = "<group>";
+		};
+		84F17DFC1EB9826C00481237 /* GuideView(引导界面) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "GuideView(引导界面)";
+			sourceTree = "<group>";
+		};
+		84F17DFD1EB9826C00481237 /* Login(登陆) */ = {
+			isa = PBXGroup;
+			children = (
+				84F17DFF1EB9838E00481237 /* PasswordLoginViewController.h */,
+				84F17E001EB9838E00481237 /* PasswordLoginViewController.m */,
+			);
+			path = "Login(登陆)";
+			sourceTree = "<group>";
+		};
+		84F17DFE1EB9826C00481237 /* Register(注册) */ = {
+			isa = PBXGroup;
+			children = (
+				84F17E021EB9854B00481237 /* RegisterViewController.h */,
+				84F17E031EB9854B00481237 /* RegisterViewController.m */,
+			);
+			path = "Register(注册)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F17DD41EB970B300481237 /* CooBill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F17DEC1EB970B300481237 /* Build configuration list for PBXNativeTarget "CooBill" */;
+			buildPhases = (
+				3FCA7D9CE0581C4AE520D5A4 /* [CP] Check Pods Manifest.lock */,
+				84F17DD11EB970B300481237 /* Sources */,
+				84F17DD21EB970B300481237 /* Frameworks */,
+				84F17DD31EB970B300481237 /* Resources */,
+				0725644231EFB342432F0175 /* [CP] Embed Pods Frameworks */,
+				B42344452CC7E38E36512707 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CooBill;
+			productName = CooBill;
+			productReference = 84F17DD51EB970B300481237 /* CooBill.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F17DCD1EB970B300481237 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = lkp;
+				TargetAttributes = {
+					84F17DD41EB970B300481237 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7HGMKW4KMG;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 84F17DD01EB970B300481237 /* Build configuration list for PBXProject "CooBill" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84F17DCC1EB970B300481237;
+			productRefGroup = 84F17DD61EB970B300481237 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F17DD41EB970B300481237 /* CooBill */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F17DD31EB970B300481237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F17DE51EB970B300481237 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0725644231EFB342432F0175 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CooBill/Pods-CooBill-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FCA7D9CE0581C4AE520D5A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B42344452CC7E38E36512707 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CooBill/Pods-CooBill-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F17DD11EB970B300481237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F17E041EB9854B00481237 /* RegisterViewController.m in Sources */,
+				84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */,
+				84F17DF81EB9721000481237 /* MainViewController.m in Sources */,
+				84F17DDA1EB970B300481237 /* main.m in Sources */,
+				84F17E011EB9838E00481237 /* PasswordLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		84F17DEA1EB970B300481237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F17DEB1EB970B300481237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F17DED1EB970B300481237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31301ECA6578C7401709F522 /* Pods-CooBill.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7HGMKW4KMG;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CooBill/CooBill-Prefix.pch";
+				INFOPLIST_FILE = CooBill/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lkp.com.CooBill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84F17DEE1EB970B300481237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C342B5305451836822FECE0D /* Pods-CooBill.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7HGMKW4KMG;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CooBill/CooBill-Prefix.pch";
+				INFOPLIST_FILE = CooBill/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lkp.com.CooBill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F17DD01EB970B300481237 /* Build configuration list for PBXProject "CooBill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F17DEA1EB970B300481237 /* Debug */,
+				84F17DEB1EB970B300481237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F17DEC1EB970B300481237 /* Build configuration list for PBXNativeTarget "CooBill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F17DED1EB970B300481237 /* Debug */,
+				84F17DEE1EB970B300481237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84F17DCD1EB970B300481237 /* Project object */;
+}
