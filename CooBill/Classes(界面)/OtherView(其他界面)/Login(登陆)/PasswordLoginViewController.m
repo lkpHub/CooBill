@@ -47,12 +47,12 @@
         UITextField *textField = [[UITextField alloc]initWithFrame:CGRectMake(Set_X, height, KPWidth - 2 * Set_X, TextFieldH)];
         [self.view addSubview:textField];
         
+        textField.tag = 10 * i;
         textField.textAlignment = NSTextAlignmentLeft;
         textField.textColor = [UIColor blackColor];
         textField.keyboardType = UIKeyboardTypeASCIICapableNumberPad;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.font = [UIFont fontWithName:@"Helvetica" size:18];
-        textField.tag = 10 * i;
         textField.leftViewMode = UITextFieldViewModeAlways;
         textField.delegate = self;
         
@@ -69,8 +69,8 @@
                 
                 //添加点击事件
                 UIButton *tapBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-                tapBtn.frame = textField.frame;
                 tapBtn.tag = 11;
+                tapBtn.frame = textField.frame;
                 [tapBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
                 [self.view addSubview:tapBtn];
             }
@@ -113,14 +113,93 @@
     
     //搭建登陆按钮
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    loginBtn.tag = 40;
     loginBtn.backgroundColor = [UIColor orangeColor];
-//    loginBtn setFrame:CGRectMake(Set_X, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+    loginBtn.layer.cornerRadius = 5;
+    loginBtn.layer.masksToBounds = YES;
+    [loginBtn setTitle:@"登 陆" forState:UIControlStateNormal];
+    [loginBtn.titleLabel setFont:[UIFont systemFontOfSize:20]];
+    [loginBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [loginBtn setFrame:CGRectMake(Set_X, height + 15, KPWidth - 2 * Set_X, TextFieldH)];
+    [self.view addSubview:loginBtn];
+    
+    //搭建遇到问题按钮
+    UIButton *questionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    questionBtn.tag = 50;
+    questionBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    questionBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    [questionBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [questionBtn setTitle:@"遇到问题？" forState:UIControlStateNormal];
+    [questionBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [questionBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:questionBtn];
+    [questionBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(loginBtn.bottom).offset(15);
+        make.left.equalTo(self.view).offset(15);
+        make.size.equalTo(CGSizeMake(100, 15));
+    }];
+    
+    //搭建注册按钮
+    UIButton *registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    registerBtn.tag = 60;
+    [registerBtn.titleLabel setFont:[UIFont systemFontOfSize:17]];
+    [registerBtn setTitle:@"新用户注册" forState:UIControlStateNormal];
+    [registerBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [registerBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [registerBtn.layer setBorderWidth:1.0];
+    [registerBtn.layer setBorderColor:[UIColor orangeColor].CGColor];
+    registerBtn.layer.cornerRadius = 5;
+    registerBtn.layer.masksToBounds = YES;
+    [self.view addSubview:registerBtn];
+    [registerBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view).offset(- 15);
+        make.centerX.equalTo(self.view);
+        make.size.equalTo(CGSizeMake(100, 30));
+    }];
 }
 
 #pragma mark - 按钮点击
 - (void)btnClick:(UIButton *)sender{
     
-    KPLog(@"点击了国家码");
+    switch (sender.tag) {
+        case 11://国家码按钮点击
+        {
+            KPLog(@"国家码点击");
+        }
+            break;
+        case 40://登陆
+        {
+            KPLog(@"登陆点击");
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.mode = MBProgressHUDModeIndeterminate;
+            hud.label.text = @"加载中...";
+            
+            UITextField *telField = [self.view viewWithTag:20];
+            UITextField *passWordField = [self.view viewWithTag:30];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            if ([telField.text isEqualToString:@"1"] && [passWordField.text isEqualToString:@"1"]) {
+                KPLog(@"登陆成功");
+                [KPAppDelegate gotoMainView];
+            }else{
+                [SHToast showWithText:@"登陆失败" duration:1.0];
+                KPLog(@"登陆失败");
+            }
+        }
+            break;
+        case 50://遇到问题
+        {
+            KPLog(@"遇到问题点击");
+        }
+            break;
+        case 60://注册按钮
+        {
+            KPLog(@"注册点击");
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - 文件改变监听
@@ -157,6 +236,12 @@
             break;
     }
     return YES;
+}
+
+#pragma mark - 点击空白
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {

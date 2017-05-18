@@ -60,8 +60,15 @@
 #pragma mark - 跳转到登陆界面
 - (void)gotoLoginView{
     
-    PasswordLoginViewController *loginVC = [[PasswordLoginViewController alloc]init];
-    self.window.rootViewController = loginVC;
+    PasswordLoginViewController *loginVc = [[PasswordLoginViewController alloc]init];
+    self.window.rootViewController = loginVc;
+}
+
+#pragma mark - 跳转到主界面
+- (void)gotoMainView{
+    
+    MainViewController *mainVc = [[MainViewController alloc]init];
+    self.window.rootViewController = mainVc;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -12,6 +12,14 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+/**
+ 跳转到登陆界面
+ */
+- (void)gotoLoginView;
 
+/**
+ 跳转到主界面
+ */
+- (void)gotoMainView;
 @end
 

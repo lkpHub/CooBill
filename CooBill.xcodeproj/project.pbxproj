@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		73E3AD1B7233B58B242CCCF5 /* Pods_CooBill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED468137BB2DD43CBE3FD5FC /* Pods_CooBill.framework */; };
+		8444C2031ECD3FD2003294FB /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2021ECD3FD2003294FB /* UIView+Toast.m */; };
+		8444C2081ECD4A1F003294FB /* CountryCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2071ECD4A1F003294FB /* CountryCodeTableViewController.m */; };
+		8444C2131ECD4EDA003294FB /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2121ECD4EDA003294FB /* NSString+Extension.m */; };
 		84F17DDA1EB970B300481237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DD91EB970B300481237 /* main.m */; };
 		84F17DE51EB970B300481237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F17DE41EB970B300481237 /* Assets.xcassets */; };
 		84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DF41EB971DE00481237 /* AppDelegate.m */; };
@@ -18,6 +21,12 @@
 
 /* Begin PBXFileReference section */
 		31301ECA6578C7401709F522 /* Pods-CooBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CooBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CooBill/Pods-CooBill.debug.xcconfig"; sourceTree = "<group>"; };
+		8444C2011ECD3FD2003294FB /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		8444C2021ECD3FD2003294FB /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		8444C2061ECD4A1F003294FB /* CountryCodeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCodeTableViewController.h; sourceTree = "<group>"; };
+		8444C2071ECD4A1F003294FB /* CountryCodeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryCodeTableViewController.m; sourceTree = "<group>"; };
+		8444C2111ECD4EDA003294FB /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		8444C2121ECD4EDA003294FB /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		84D4B1231EBC77DB00FA02FB /* MacroHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
 		84F17DD51EB970B300481237 /* CooBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CooBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F17DD91EB970B300481237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +75,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8444C2001ECD3FD2003294FB /* SHToast(提示视图) */ = {
+			isa = PBXGroup;
+			children = (
+				8444C2011ECD3FD2003294FB /* UIView+Toast.h */,
+				8444C2021ECD3FD2003294FB /* UIView+Toast.m */,
+			);
+			path = "SHToast(提示视图)";
+			sourceTree = "<group>";
+		};
+		8444C2051ECD49F7003294FB /* CountryCode(国家码) */ = {
+			isa = PBXGroup;
+			children = (
+				8444C2061ECD4A1F003294FB /* CountryCodeTableViewController.h */,
+				8444C2071ECD4A1F003294FB /* CountryCodeTableViewController.m */,
+			);
+			path = "CountryCode(国家码)";
+			sourceTree = "<group>";
+		};
+		8444C2091ECD4C0E003294FB /* Category(类别) */ = {
+			isa = PBXGroup;
+			children = (
+				8444C2111ECD4EDA003294FB /* NSString+Extension.h */,
+				8444C2121ECD4EDA003294FB /* NSString+Extension.m */,
+			);
+			path = "Category(类别)";
+			sourceTree = "<group>";
+		};
 		84D4B1271EC0923300FA02FB /* Resource(资源) */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +134,7 @@
 				84F17DF01EB971CE00481237 /* Custom(自定义) */,
 				84F17DF11EB971D700481237 /* Header(头文件) */,
 				84F17DF21EB971DE00481237 /* Other(其他) */,
+				8444C2091ECD4C0E003294FB /* Category(类别) */,
 				84D4B1271EC0923300FA02FB /* Resource(资源) */,
 				84F17DD81EB970B300481237 /* Supporting Files */,
 			);
@@ -128,6 +165,7 @@
 		84F17DF01EB971CE00481237 /* Custom(自定义) */ = {
 			isa = PBXGroup;
 			children = (
+				8444C2001ECD3FD2003294FB /* SHToast(提示视图) */,
 			);
 			path = "Custom(自定义)";
 			sourceTree = "<group>";
@@ -156,6 +194,7 @@
 				84F17DFC1EB9826C00481237 /* GuideView(引导界面) */,
 				84F17DFD1EB9826C00481237 /* Login(登陆) */,
 				84F17DFE1EB9826C00481237 /* Register(注册) */,
+				8444C2051ECD49F7003294FB /* CountryCode(国家码) */,
 			);
 			path = "OtherView(其他界面)";
 			sourceTree = "<group>";
@@ -306,11 +345,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8444C2031ECD3FD2003294FB /* UIView+Toast.m in Sources */,
 				84F17E041EB9854B00481237 /* RegisterViewController.m in Sources */,
 				84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */,
+				8444C2081ECD4A1F003294FB /* CountryCodeTableViewController.m in Sources */,
 				84F17DF81EB9721000481237 /* MainViewController.m in Sources */,
 				84F17DDA1EB970B300481237 /* main.m in Sources */,
 				84F17E011EB9838E00481237 /* PasswordLoginViewController.m in Sources */,
+				8444C2131ECD4EDA003294FB /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

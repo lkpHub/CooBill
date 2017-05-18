@@ -12,6 +12,7 @@
 
 #endif /* ClassHeader_h */
 //常用的类头文件
+#import "AppDelegate.h"
 
 #pragma mark - 第三方文件
 //网络请求
@@ -22,3 +23,6 @@
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
+//提示信息
+#import "UIView+Toast.h"
+
