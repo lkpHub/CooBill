@@ -18,7 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor magentaColor];
+//    self.view.backgroundColor = [UIColor magentaColor];
+    self.title = @"主界面";
 }
 
 - (void)didReceiveMemoryWarning {

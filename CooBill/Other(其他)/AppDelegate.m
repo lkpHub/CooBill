@@ -68,7 +68,8 @@
 - (void)gotoMainView{
     
     MainViewController *mainVc = [[MainViewController alloc]init];
-    self.window.rootViewController = mainVc;
+    KPNavigationController *nav = [[KPNavigationController alloc]initWithRootViewController:mainVc];
+    self.window.rootViewController = nav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

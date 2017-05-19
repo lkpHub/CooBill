@@ -1,5 +1,5 @@
 //
-//  NSString+Extension.h
+//  NSString+Category.h
 //  CooBill
 //
 //  Created by admin on 2017/5/18.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Extension)
+@interface NSString (Category)
 
 @end

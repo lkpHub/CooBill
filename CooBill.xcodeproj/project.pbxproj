@@ -10,7 +10,8 @@
 		73E3AD1B7233B58B242CCCF5 /* Pods_CooBill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED468137BB2DD43CBE3FD5FC /* Pods_CooBill.framework */; };
 		8444C2031ECD3FD2003294FB /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2021ECD3FD2003294FB /* UIView+Toast.m */; };
 		8444C2081ECD4A1F003294FB /* CountryCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2071ECD4A1F003294FB /* CountryCodeTableViewController.m */; };
-		8444C2131ECD4EDA003294FB /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2121ECD4EDA003294FB /* NSString+Extension.m */; };
+		8444C21C1ECD746F003294FB /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2191ECD746F003294FB /* NSString+Category.m */; };
+		8444C2201ECD757E003294FB /* KPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C21F1ECD757E003294FB /* KPNavigationController.m */; };
 		84F17DDA1EB970B300481237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DD91EB970B300481237 /* main.m */; };
 		84F17DE51EB970B300481237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F17DE41EB970B300481237 /* Assets.xcassets */; };
 		84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DF41EB971DE00481237 /* AppDelegate.m */; };
@@ -25,8 +26,10 @@
 		8444C2021ECD3FD2003294FB /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		8444C2061ECD4A1F003294FB /* CountryCodeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCodeTableViewController.h; sourceTree = "<group>"; };
 		8444C2071ECD4A1F003294FB /* CountryCodeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryCodeTableViewController.m; sourceTree = "<group>"; };
-		8444C2111ECD4EDA003294FB /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
-		8444C2121ECD4EDA003294FB /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		8444C2181ECD746F003294FB /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		8444C2191ECD746F003294FB /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		8444C21E1ECD757E003294FB /* KPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPNavigationController.h; sourceTree = "<group>"; };
+		8444C21F1ECD757E003294FB /* KPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNavigationController.m; sourceTree = "<group>"; };
 		84D4B1231EBC77DB00FA02FB /* MacroHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
 		84F17DD51EB970B300481237 /* CooBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CooBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F17DD91EB970B300481237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,10 +99,43 @@
 		8444C2091ECD4C0E003294FB /* Category(类别) */ = {
 			isa = PBXGroup;
 			children = (
-				8444C2111ECD4EDA003294FB /* NSString+Extension.h */,
-				8444C2121ECD4EDA003294FB /* NSString+Extension.m */,
+				8444C2171ECD746F003294FB /* NSString */,
+				8444C21A1ECD746F003294FB /* UIBarButtonItem */,
+				8444C21B1ECD746F003294FB /* UIButton */,
 			);
 			path = "Category(类别)";
+			sourceTree = "<group>";
+		};
+		8444C2171ECD746F003294FB /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				8444C2181ECD746F003294FB /* NSString+Category.h */,
+				8444C2191ECD746F003294FB /* NSString+Category.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		8444C21A1ECD746F003294FB /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		8444C21B1ECD746F003294FB /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		8444C21D1ECD7517003294FB /* NavigationController(导航栏) */ = {
+			isa = PBXGroup;
+			children = (
+				8444C21E1ECD757E003294FB /* KPNavigationController.h */,
+				8444C21F1ECD757E003294FB /* KPNavigationController.m */,
+			);
+			path = "NavigationController(导航栏)";
 			sourceTree = "<group>";
 		};
 		84D4B1271EC0923300FA02FB /* Resource(资源) */ = {
@@ -165,6 +201,7 @@
 		84F17DF01EB971CE00481237 /* Custom(自定义) */ = {
 			isa = PBXGroup;
 			children = (
+				8444C21D1ECD7517003294FB /* NavigationController(导航栏) */,
 				8444C2001ECD3FD2003294FB /* SHToast(提示视图) */,
 			);
 			path = "Custom(自定义)";
@@ -350,9 +387,10 @@
 				84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */,
 				8444C2081ECD4A1F003294FB /* CountryCodeTableViewController.m in Sources */,
 				84F17DF81EB9721000481237 /* MainViewController.m in Sources */,
+				8444C2201ECD757E003294FB /* KPNavigationController.m in Sources */,
 				84F17DDA1EB970B300481237 /* main.m in Sources */,
 				84F17E011EB9838E00481237 /* PasswordLoginViewController.m in Sources */,
-				8444C2131ECD4EDA003294FB /* NSString+Extension.m in Sources */,
+				8444C21C1ECD746F003294FB /* NSString+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
