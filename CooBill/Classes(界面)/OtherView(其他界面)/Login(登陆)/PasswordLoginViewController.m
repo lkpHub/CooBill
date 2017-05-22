@@ -7,9 +7,13 @@
 //
 
 #import "PasswordLoginViewController.h"
+#import "CountryCodeTableViewController.h"
 
 @interface PasswordLoginViewController ()<UITextFieldDelegate>
-
+//是否有号码
+@property (nonatomic, assign) BOOL isHavePhone;
+//是否有密码
+@property (nonatomic, assign) BOOL isHavePassword;
 @end
 
 @implementation PasswordLoginViewController
@@ -21,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isHavePhone = NO;
+    self.isHavePassword = NO;
     
     //搭建UI视图
     [self setUpView];
@@ -78,6 +84,7 @@
             case 20://手机号行
             {
                 textField.placeholder = @"请输入手机号";
+                [textField addTarget:self action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
                 
                 UITextField *codeTextField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, ViewLeftW, TextFieldH)];
                 codeTextField.textAlignment = NSTextAlignmentLeft;
@@ -95,6 +102,7 @@
             case 30://密码输入框
             {
                 textField.placeholder = @"请输入密码";
+                [textField addTarget:self action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
                 //默认为NO，设置为YES时，当文本零内容时，将禁用返回键，有内容则放开返回键
                 textField.secureTextEntry = YES;
             }
@@ -114,11 +122,13 @@
     //搭建登陆按钮
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     loginBtn.tag = 40;
-    loginBtn.backgroundColor = [UIColor orangeColor];
+    loginBtn.backgroundColor = RGB(165, 221, 165, 1.0);
     loginBtn.layer.cornerRadius = 5;
     loginBtn.layer.masksToBounds = YES;
     [loginBtn setTitle:@"登 陆" forState:UIControlStateNormal];
+    [loginBtn setTitleColor:RGB(220, 241, 220, 0.9) forState:UIControlStateNormal];
     [loginBtn.titleLabel setFont:[UIFont systemFontOfSize:20]];
+    loginBtn.userInteractionEnabled = NO;
     [loginBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [loginBtn setFrame:CGRectMake(Set_X, height + 15, KPWidth - 2 * Set_X, TextFieldH)];
     [self.view addSubview:loginBtn];
@@ -130,7 +140,7 @@
     questionBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     [questionBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
     [questionBtn setTitle:@"遇到问题？" forState:UIControlStateNormal];
-    [questionBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [questionBtn setTitleColor:RGB(57, 87, 137, 1.0) forState:UIControlStateNormal];
     [questionBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:questionBtn];
     [questionBtn makeConstraints:^(MASConstraintMaker *make) {
@@ -144,10 +154,10 @@
     registerBtn.tag = 60;
     [registerBtn.titleLabel setFont:[UIFont systemFontOfSize:17]];
     [registerBtn setTitle:@"新用户注册" forState:UIControlStateNormal];
-    [registerBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [registerBtn setTitleColor:RGB(57, 87, 137, 1.0) forState:UIControlStateNormal];
     [registerBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [registerBtn.layer setBorderWidth:1.0];
-    [registerBtn.layer setBorderColor:[UIColor orangeColor].CGColor];
+    [registerBtn.layer setBorderColor:RGB(57, 87, 137, 0.8).CGColor];
     registerBtn.layer.cornerRadius = 5;
     registerBtn.layer.masksToBounds = YES;
     [self.view addSubview:registerBtn];
@@ -165,6 +175,9 @@
         case 11://国家码按钮点击
         {
             KPLog(@"国家码点击");
+            CountryCodeTableViewController *codeView = [[CountryCodeTableViewController alloc]init];
+            KPNavigationController *nav = [[KPNavigationController alloc]initWithRootViewController:codeView];
+            [self presentViewController:nav animated:YES completion:nil];
         }
             break;
         case 40://登陆
@@ -205,6 +218,46 @@
 #pragma mark - 文件改变监听
 - (void)textFieldChange:(UITextField *)sender{
     
+    NSLog(@"sender = %@",sender.text);
+    switch (sender.tag) {
+        case 20://手机号码输入框
+        {
+            if (sender.text.length) {
+                self.isHavePhone = YES;
+            }else{
+                self.isHavePhone = NO;
+            }
+        }
+            break;
+        case 21://国家码输入框
+        {
+            
+        }
+            break;
+        case 30://密码输入框
+        {
+            if (sender.text.length) {
+                self.isHavePassword = YES;
+            }else{
+                self.isHavePassword = NO;
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    UIButton *btn = [self.view viewWithTag:40];
+    if (self.isHavePhone && self.isHavePassword) {
+        btn.userInteractionEnabled = YES;
+        btn.backgroundColor = RGB(38, 171, 40, 0.9);
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }else{
+        btn.userInteractionEnabled = NO;
+        btn.backgroundColor = RGB(165, 221, 165, 1.0);
+        [btn setTitleColor:RGB(220, 241, 220, 0.9) forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark - textFieldDelegate
@@ -227,7 +280,7 @@
             }
         }
             break;
-        case 22://登陆密码输入框
+        case 30://登陆密码输入框
         {
             
         }
@@ -237,6 +290,7 @@
     }
     return YES;
 }
+
 
 #pragma mark - 点击空白
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

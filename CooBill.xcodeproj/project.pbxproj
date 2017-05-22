@@ -12,6 +12,8 @@
 		8444C2081ECD4A1F003294FB /* CountryCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2071ECD4A1F003294FB /* CountryCodeTableViewController.m */; };
 		8444C21C1ECD746F003294FB /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2191ECD746F003294FB /* NSString+Category.m */; };
 		8444C2201ECD757E003294FB /* KPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C21F1ECD757E003294FB /* KPNavigationController.m */; };
+		8444C2291ED27E40003294FB /* UIBarButtonItem+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2281ED27E40003294FB /* UIBarButtonItem+Category.m */; };
+		8444C2321ED2937B003294FB /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2311ED2937B003294FB /* UIImage+Category.m */; };
 		84F17DDA1EB970B300481237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DD91EB970B300481237 /* main.m */; };
 		84F17DE51EB970B300481237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F17DE41EB970B300481237 /* Assets.xcassets */; };
 		84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DF41EB971DE00481237 /* AppDelegate.m */; };
@@ -30,6 +32,10 @@
 		8444C2191ECD746F003294FB /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		8444C21E1ECD757E003294FB /* KPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPNavigationController.h; sourceTree = "<group>"; };
 		8444C21F1ECD757E003294FB /* KPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNavigationController.m; sourceTree = "<group>"; };
+		8444C2271ED27E40003294FB /* UIBarButtonItem+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Category.h"; sourceTree = "<group>"; };
+		8444C2281ED27E40003294FB /* UIBarButtonItem+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Category.m"; sourceTree = "<group>"; };
+		8444C2301ED2937B003294FB /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		8444C2311ED2937B003294FB /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		84D4B1231EBC77DB00FA02FB /* MacroHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
 		84F17DD51EB970B300481237 /* CooBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CooBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F17DD91EB970B300481237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,9 +105,11 @@
 		8444C2091ECD4C0E003294FB /* Category(类别) */ = {
 			isa = PBXGroup;
 			children = (
+				8444C22F1ED2935E003294FB /* UIImage */,
 				8444C2171ECD746F003294FB /* NSString */,
 				8444C21A1ECD746F003294FB /* UIBarButtonItem */,
 				8444C21B1ECD746F003294FB /* UIButton */,
+				8444C22B1ED28C18003294FB /* UIView */,
 			);
 			path = "Category(类别)";
 			sourceTree = "<group>";
@@ -136,6 +144,31 @@
 				8444C21F1ECD757E003294FB /* KPNavigationController.m */,
 			);
 			path = "NavigationController(导航栏)";
+			sourceTree = "<group>";
+		};
+		8444C2261ED27E10003294FB /* UIBarButtonItem(导航栏按钮) */ = {
+			isa = PBXGroup;
+			children = (
+				8444C2271ED27E40003294FB /* UIBarButtonItem+Category.h */,
+				8444C2281ED27E40003294FB /* UIBarButtonItem+Category.m */,
+			);
+			path = "UIBarButtonItem(导航栏按钮)";
+			sourceTree = "<group>";
+		};
+		8444C22B1ED28C18003294FB /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		8444C22F1ED2935E003294FB /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				8444C2301ED2937B003294FB /* UIImage+Category.h */,
+				8444C2311ED2937B003294FB /* UIImage+Category.m */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		84D4B1271EC0923300FA02FB /* Resource(资源) */ = {
@@ -203,6 +236,7 @@
 			children = (
 				8444C21D1ECD7517003294FB /* NavigationController(导航栏) */,
 				8444C2001ECD3FD2003294FB /* SHToast(提示视图) */,
+				8444C2261ED27E10003294FB /* UIBarButtonItem(导航栏按钮) */,
 			);
 			path = "Custom(自定义)";
 			sourceTree = "<group>";
@@ -384,6 +418,8 @@
 			files = (
 				8444C2031ECD3FD2003294FB /* UIView+Toast.m in Sources */,
 				84F17E041EB9854B00481237 /* RegisterViewController.m in Sources */,
+				8444C2321ED2937B003294FB /* UIImage+Category.m in Sources */,
+				8444C2291ED27E40003294FB /* UIBarButtonItem+Category.m in Sources */,
 				84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */,
 				8444C2081ECD4A1F003294FB /* CountryCodeTableViewController.m in Sources */,
 				84F17DF81EB9721000481237 /* MainViewController.m in Sources */,

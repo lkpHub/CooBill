@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"选择国家码";
+    //设置左上角返回键
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_back" highlightImage:@"nav_back" target:self action:@selector(leftBtnClick)];
 }
 
 #pragma mark - Table view data source
@@ -28,6 +31,10 @@
     return 0;
 }
 
+- (void)leftBtnClick{
+    [self.view endEditing:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

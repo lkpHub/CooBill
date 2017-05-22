@@ -41,8 +41,6 @@
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:20];
     [bar setTitleTextAttributes:attrs];
     
-    //设置颜色渐变
-//    [bar.layer insertSublayer:[self gradientLayer] atIndex:0];
 }
 
 #pragma mark - 设置渐变颜色
@@ -64,12 +62,14 @@
     return gradientLayer;
 }
 
+#pragma mark - pushView
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     if (self.viewControllers.count) {
         //跳转其他界面时候隐藏TabBar
         viewController.hidesBottomBarWhenPushed = YES;
     }
+    viewController.navigationItem.backBarButtonItem = [UIBarButtonItem backItemWithTitle:@"" target:nil action:nil];
     [super pushViewController:viewController animated:animated];
 }
 

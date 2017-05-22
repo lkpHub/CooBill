@@ -16,6 +16,8 @@
 
 #pragma mark - 自定义头文件
 #import "KPNavigationController.h"
+#import "UIBarButtonItem+Category.h"
+#import "UIImage+Category.h"
 
 #pragma mark - 第三方文件
 //网络请求
