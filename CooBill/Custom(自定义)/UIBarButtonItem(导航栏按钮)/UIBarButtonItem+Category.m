@@ -18,8 +18,11 @@
     [item setBackgroundImage:[UIImage resizedImage:highlightImage] forState:UIControlStateHighlighted];
     //设置大小
     CGSize size = item.currentBackgroundImage.size;
-    item.frame = CGRectMake(0, 0, size.width, size.height);
-//    item.frame = cgmake
+    CGRect frame = item.frame;
+    frame.size = size;
+    item.frame = frame;
+//    item.frame = CGRectMake(0, 0, size.width, size.height);
+//    item.frame.size = size;
     //添加点击事件
     [item addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc]initWithCustomView:item];

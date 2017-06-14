@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		73E3AD1B7233B58B242CCCF5 /* Pods_CooBill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED468137BB2DD43CBE3FD5FC /* Pods_CooBill.framework */; };
+		841762681ED42F740056BA09 /* PublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 841762671ED42F740056BA09 /* PublicMethod.m */; };
+		8417626C1ED5308C0056BA09 /* JKRSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8417626A1ED5308C0056BA09 /* JKRSearchController.m */; };
+		8417626F1ED530990056BA09 /* JKRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8417626D1ED530990056BA09 /* JKRSearchBar.m */; };
+		841762721ED530A00056BA09 /* JKRSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 841762701ED530A00056BA09 /* JKRSearchTextField.m */; };
+		841762751ED531040056BA09 /* UIView+JKR_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 841762731ED531040056BA09 /* UIView+JKR_Frame.m */; };
+		841762781ED5313B0056BA09 /* UIView+JKRTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 841762761ED5313B0056BA09 /* UIView+JKRTouch.m */; };
+		8417627B1ED5321E0056BA09 /* UIView+JKRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841762791ED5321E0056BA09 /* UIView+JKRViewController.m */; };
+		8417627E1ED534F30056BA09 /* UIViewController+JKRStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8417627C1ED534F30056BA09 /* UIViewController+JKRStatusBarStyle.m */; };
+		841762811ED554220056BA09 /* JKRSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8417627F1ED554220056BA09 /* JKRSearchResultViewController.m */; };
+		841762851ED56C080056BA09 /* country.txt in Resources */ = {isa = PBXBuildFile; fileRef = 841762841ED56C080056BA09 /* country.txt */; };
 		8444C2031ECD3FD2003294FB /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2021ECD3FD2003294FB /* UIView+Toast.m */; };
 		8444C2081ECD4A1F003294FB /* CountryCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2071ECD4A1F003294FB /* CountryCodeTableViewController.m */; };
 		8444C21C1ECD746F003294FB /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444C2191ECD746F003294FB /* NSString+Category.m */; };
@@ -24,6 +34,25 @@
 
 /* Begin PBXFileReference section */
 		31301ECA6578C7401709F522 /* Pods-CooBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CooBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CooBill/Pods-CooBill.debug.xcconfig"; sourceTree = "<group>"; };
+		841762661ED42F740056BA09 /* PublicMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicMethod.h; sourceTree = "<group>"; };
+		841762671ED42F740056BA09 /* PublicMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicMethod.m; sourceTree = "<group>"; };
+		8417626A1ED5308C0056BA09 /* JKRSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRSearchController.m; sourceTree = "<group>"; };
+		8417626B1ED5308C0056BA09 /* JKRSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRSearchController.h; sourceTree = "<group>"; };
+		8417626D1ED530990056BA09 /* JKRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRSearchBar.m; sourceTree = "<group>"; };
+		8417626E1ED530990056BA09 /* JKRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRSearchBar.h; sourceTree = "<group>"; };
+		841762701ED530A00056BA09 /* JKRSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRSearchTextField.m; sourceTree = "<group>"; };
+		841762711ED530A00056BA09 /* JKRSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRSearchTextField.h; sourceTree = "<group>"; };
+		841762731ED531040056BA09 /* UIView+JKR_Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKR_Frame.m"; sourceTree = "<group>"; };
+		841762741ED531040056BA09 /* UIView+JKR_Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKR_Frame.h"; sourceTree = "<group>"; };
+		841762761ED5313B0056BA09 /* UIView+JKRTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRTouch.m"; sourceTree = "<group>"; };
+		841762771ED5313B0056BA09 /* UIView+JKRTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRTouch.h"; sourceTree = "<group>"; };
+		841762791ED5321E0056BA09 /* UIView+JKRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRViewController.m"; sourceTree = "<group>"; };
+		8417627A1ED5321E0056BA09 /* UIView+JKRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRViewController.h"; sourceTree = "<group>"; };
+		8417627C1ED534F30056BA09 /* UIViewController+JKRStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JKRStatusBarStyle.m"; sourceTree = "<group>"; };
+		8417627D1ED534F30056BA09 /* UIViewController+JKRStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JKRStatusBarStyle.h"; sourceTree = "<group>"; };
+		8417627F1ED554220056BA09 /* JKRSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRSearchResultViewController.m; sourceTree = "<group>"; };
+		841762801ED554220056BA09 /* JKRSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRSearchResultViewController.h; sourceTree = "<group>"; };
+		841762841ED56C080056BA09 /* country.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = country.txt; sourceTree = "<group>"; };
 		8444C2011ECD3FD2003294FB /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		8444C2021ECD3FD2003294FB /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		8444C2061ECD4A1F003294FB /* CountryCodeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCodeTableViewController.h; sourceTree = "<group>"; };
@@ -84,6 +113,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		841762651ED42F330056BA09 /* PublicMethod(公共方法) */ = {
+			isa = PBXGroup;
+			children = (
+				841762661ED42F740056BA09 /* PublicMethod.h */,
+				841762671ED42F740056BA09 /* PublicMethod.m */,
+			);
+			path = "PublicMethod(公共方法)";
+			sourceTree = "<group>";
+		};
+		841762691ED530360056BA09 /* SearchController(搜索栏) */ = {
+			isa = PBXGroup;
+			children = (
+				8417626A1ED5308C0056BA09 /* JKRSearchController.m */,
+				8417626B1ED5308C0056BA09 /* JKRSearchController.h */,
+				8417626D1ED530990056BA09 /* JKRSearchBar.m */,
+				8417626E1ED530990056BA09 /* JKRSearchBar.h */,
+				841762701ED530A00056BA09 /* JKRSearchTextField.m */,
+				841762711ED530A00056BA09 /* JKRSearchTextField.h */,
+				841762731ED531040056BA09 /* UIView+JKR_Frame.m */,
+				841762741ED531040056BA09 /* UIView+JKR_Frame.h */,
+				841762761ED5313B0056BA09 /* UIView+JKRTouch.m */,
+				841762771ED5313B0056BA09 /* UIView+JKRTouch.h */,
+				841762791ED5321E0056BA09 /* UIView+JKRViewController.m */,
+				8417627A1ED5321E0056BA09 /* UIView+JKRViewController.h */,
+				8417627C1ED534F30056BA09 /* UIViewController+JKRStatusBarStyle.m */,
+				8417627D1ED534F30056BA09 /* UIViewController+JKRStatusBarStyle.h */,
+			);
+			path = "SearchController(搜索栏)";
+			sourceTree = "<group>";
+		};
 		8444C2001ECD3FD2003294FB /* SHToast(提示视图) */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +157,8 @@
 			children = (
 				8444C2061ECD4A1F003294FB /* CountryCodeTableViewController.h */,
 				8444C2071ECD4A1F003294FB /* CountryCodeTableViewController.m */,
+				8417627F1ED554220056BA09 /* JKRSearchResultViewController.m */,
+				841762801ED554220056BA09 /* JKRSearchResultViewController.h */,
 			);
 			path = "CountryCode(国家码)";
 			sourceTree = "<group>";
@@ -174,6 +235,7 @@
 		84D4B1271EC0923300FA02FB /* Resource(资源) */ = {
 			isa = PBXGroup;
 			children = (
+				841762841ED56C080056BA09 /* country.txt */,
 			);
 			path = "Resource(资源)";
 			sourceTree = "<group>";
@@ -234,9 +296,11 @@
 		84F17DF01EB971CE00481237 /* Custom(自定义) */ = {
 			isa = PBXGroup;
 			children = (
+				841762651ED42F330056BA09 /* PublicMethod(公共方法) */,
 				8444C21D1ECD7517003294FB /* NavigationController(导航栏) */,
 				8444C2001ECD3FD2003294FB /* SHToast(提示视图) */,
 				8444C2261ED27E10003294FB /* UIBarButtonItem(导航栏按钮) */,
+				841762691ED530360056BA09 /* SearchController(搜索栏) */,
 			);
 			path = "Custom(自定义)";
 			sourceTree = "<group>";
@@ -358,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F17DE51EB970B300481237 /* Assets.xcassets in Resources */,
+				841762851ED56C080056BA09 /* country.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,16 +482,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				8444C2031ECD3FD2003294FB /* UIView+Toast.m in Sources */,
+				841762811ED554220056BA09 /* JKRSearchResultViewController.m in Sources */,
 				84F17E041EB9854B00481237 /* RegisterViewController.m in Sources */,
+				841762781ED5313B0056BA09 /* UIView+JKRTouch.m in Sources */,
+				841762751ED531040056BA09 /* UIView+JKR_Frame.m in Sources */,
 				8444C2321ED2937B003294FB /* UIImage+Category.m in Sources */,
 				8444C2291ED27E40003294FB /* UIBarButtonItem+Category.m in Sources */,
+				841762721ED530A00056BA09 /* JKRSearchTextField.m in Sources */,
 				84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */,
+				841762681ED42F740056BA09 /* PublicMethod.m in Sources */,
 				8444C2081ECD4A1F003294FB /* CountryCodeTableViewController.m in Sources */,
+				8417627E1ED534F30056BA09 /* UIViewController+JKRStatusBarStyle.m in Sources */,
+				8417626F1ED530990056BA09 /* JKRSearchBar.m in Sources */,
 				84F17DF81EB9721000481237 /* MainViewController.m in Sources */,
 				8444C2201ECD757E003294FB /* KPNavigationController.m in Sources */,
+				8417627B1ED5321E0056BA09 /* UIView+JKRViewController.m in Sources */,
 				84F17DDA1EB970B300481237 /* main.m in Sources */,
 				84F17E011EB9838E00481237 /* PasswordLoginViewController.m in Sources */,
 				8444C21C1ECD746F003294FB /* NSString+Category.m in Sources */,
+				8417626C1ED5308C0056BA09 /* JKRSearchController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

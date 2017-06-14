@@ -17,12 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"主界面";
+    self.title = @"O(∩_∩)O~";
+    BOOL a = [PublicMethod isFirstLetter:self.title];
+    NSString *b = [PublicMethod getPreferredLanguage];
+    NSString *c = [PublicMethod currentDateWithFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    KPLog(@"a = %d,b = %@,c = %@",a,b,c);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 /*
