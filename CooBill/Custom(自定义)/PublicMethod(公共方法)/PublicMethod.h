@@ -21,4 +21,6 @@
 + (NSString *)currentDateWithFormat:(NSString *)format;
 
 + (NSString *)date:(NSString *)dateTime;
+
++ (void)sadaasdas;
 @end
