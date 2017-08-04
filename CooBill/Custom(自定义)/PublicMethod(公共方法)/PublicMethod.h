@@ -6,6 +6,8 @@
 //  Copyright © 2017年 lkp. All rights reserved.
 //
 
+//公共方法添加的测试类，2017年08月04日11:16:14添加的！自己用来测试的！！！！
+
 #import <Foundation/Foundation.h>
 
 @interface PublicMethod : NSObject
