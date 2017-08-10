@@ -30,6 +30,10 @@
 		84F17DF81EB9721000481237 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17DF71EB9721000481237 /* MainViewController.m */; };
 		84F17E011EB9838E00481237 /* PasswordLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17E001EB9838E00481237 /* PasswordLoginViewController.m */; };
 		84F17E041EB9854B00481237 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F17E031EB9854B00481237 /* RegisterViewController.m */; };
+		84FB40551F3C305600F822AD /* SHBaseHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB40541F3C305600F822AD /* SHBaseHttp.m */; };
+		84FB40591F3C309C00F822AD /* IUserServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB40581F3C309C00F822AD /* IUserServer.m */; };
+		84FB405E1F3C314800F822AD /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB405D1F3C314800F822AD /* BaseModel.m */; };
+		84FB40631F3C31E000F822AD /* GetLoginExpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB40621F3C31E000F822AD /* GetLoginExpModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,15 @@
 		84F17E001EB9838E00481237 /* PasswordLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordLoginViewController.m; sourceTree = "<group>"; };
 		84F17E021EB9854B00481237 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		84F17E031EB9854B00481237 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		84FB40511F3C2FA500F822AD /* InterfaceHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceHeader.h; sourceTree = "<group>"; };
+		84FB40531F3C305600F822AD /* SHBaseHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHBaseHttp.h; sourceTree = "<group>"; };
+		84FB40541F3C305600F822AD /* SHBaseHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHBaseHttp.m; sourceTree = "<group>"; };
+		84FB40571F3C309C00F822AD /* IUserServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUserServer.h; sourceTree = "<group>"; };
+		84FB40581F3C309C00F822AD /* IUserServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUserServer.m; sourceTree = "<group>"; };
+		84FB405C1F3C314800F822AD /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		84FB405D1F3C314800F822AD /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		84FB40611F3C31E000F822AD /* GetLoginExpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLoginExpModel.h; sourceTree = "<group>"; };
+		84FB40621F3C31E000F822AD /* GetLoginExpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLoginExpModel.m; sourceTree = "<group>"; };
 		C342B5305451836822FECE0D /* Pods-CooBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CooBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-CooBill/Pods-CooBill.release.xcconfig"; sourceTree = "<group>"; };
 		ED468137BB2DD43CBE3FD5FC /* Pods_CooBill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CooBill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -264,6 +277,8 @@
 				84F17DEF1EB971C600481237 /* Classes(界面) */,
 				84F17DF01EB971CE00481237 /* Custom(自定义) */,
 				84F17DF11EB971D700481237 /* Header(头文件) */,
+				84FB40561F3C308A00F822AD /* Service(网络请求) */,
+				84FB405A1F3C311100F822AD /* Model(模型) */,
 				84F17DF21EB971DE00481237 /* Other(其他) */,
 				8444C2091ECD4C0E003294FB /* Category(类别) */,
 				84D4B1271EC0923300FA02FB /* Resource(资源) */,
@@ -296,6 +311,7 @@
 		84F17DF01EB971CE00481237 /* Custom(自定义) */ = {
 			isa = PBXGroup;
 			children = (
+				84FB40521F3C303600F822AD /* BaseHttp(网络基础) */,
 				841762651ED42F330056BA09 /* PublicMethod(公共方法) */,
 				8444C21D1ECD7517003294FB /* NavigationController(导航栏) */,
 				8444C2001ECD3FD2003294FB /* SHToast(提示视图) */,
@@ -308,6 +324,7 @@
 		84F17DF11EB971D700481237 /* Header(头文件) */ = {
 			isa = PBXGroup;
 			children = (
+				84FB40511F3C2FA500F822AD /* InterfaceHeader.h */,
 				84F17DFA1EB9747500481237 /* ClassHeader.h */,
 				84D4B1231EBC77DB00FA02FB /* MacroHeader.h */,
 			);
@@ -357,6 +374,51 @@
 				84F17E031EB9854B00481237 /* RegisterViewController.m */,
 			);
 			path = "Register(注册)";
+			sourceTree = "<group>";
+		};
+		84FB40521F3C303600F822AD /* BaseHttp(网络基础) */ = {
+			isa = PBXGroup;
+			children = (
+				84FB40531F3C305600F822AD /* SHBaseHttp.h */,
+				84FB40541F3C305600F822AD /* SHBaseHttp.m */,
+			);
+			path = "BaseHttp(网络基础)";
+			sourceTree = "<group>";
+		};
+		84FB40561F3C308A00F822AD /* Service(网络请求) */ = {
+			isa = PBXGroup;
+			children = (
+				84FB40571F3C309C00F822AD /* IUserServer.h */,
+				84FB40581F3C309C00F822AD /* IUserServer.m */,
+			);
+			path = "Service(网络请求)";
+			sourceTree = "<group>";
+		};
+		84FB405A1F3C311100F822AD /* Model(模型) */ = {
+			isa = PBXGroup;
+			children = (
+				84FB40601F3C31A500F822AD /* ServiceModel */,
+				84FB405B1F3C312F00F822AD /* BaseModel */,
+			);
+			path = "Model(模型)";
+			sourceTree = "<group>";
+		};
+		84FB405B1F3C312F00F822AD /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				84FB405C1F3C314800F822AD /* BaseModel.h */,
+				84FB405D1F3C314800F822AD /* BaseModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		84FB40601F3C31A500F822AD /* ServiceModel */ = {
+			isa = PBXGroup;
+			children = (
+				84FB40611F3C31E000F822AD /* GetLoginExpModel.h */,
+				84FB40621F3C31E000F822AD /* GetLoginExpModel.m */,
+			);
+			path = ServiceModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,9 +547,11 @@
 				841762811ED554220056BA09 /* JKRSearchResultViewController.m in Sources */,
 				84F17E041EB9854B00481237 /* RegisterViewController.m in Sources */,
 				841762781ED5313B0056BA09 /* UIView+JKRTouch.m in Sources */,
+				84FB40631F3C31E000F822AD /* GetLoginExpModel.m in Sources */,
 				841762751ED531040056BA09 /* UIView+JKR_Frame.m in Sources */,
 				8444C2321ED2937B003294FB /* UIImage+Category.m in Sources */,
 				8444C2291ED27E40003294FB /* UIBarButtonItem+Category.m in Sources */,
+				84FB40591F3C309C00F822AD /* IUserServer.m in Sources */,
 				841762721ED530A00056BA09 /* JKRSearchTextField.m in Sources */,
 				84F17DF51EB971DE00481237 /* AppDelegate.m in Sources */,
 				841762681ED42F740056BA09 /* PublicMethod.m in Sources */,
@@ -497,9 +561,11 @@
 				84F17DF81EB9721000481237 /* MainViewController.m in Sources */,
 				8444C2201ECD757E003294FB /* KPNavigationController.m in Sources */,
 				8417627B1ED5321E0056BA09 /* UIView+JKRViewController.m in Sources */,
+				84FB40551F3C305600F822AD /* SHBaseHttp.m in Sources */,
 				84F17DDA1EB970B300481237 /* main.m in Sources */,
 				84F17E011EB9838E00481237 /* PasswordLoginViewController.m in Sources */,
 				8444C21C1ECD746F003294FB /* NSString+Category.m in Sources */,
+				84FB405E1F3C314800F822AD /* BaseModel.m in Sources */,
 				8417626C1ED5308C0056BA09 /* JKRSearchController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

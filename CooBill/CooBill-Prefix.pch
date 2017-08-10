@@ -26,3 +26,5 @@
 #import "ClassHeader.h"
 //常用宏定义的文件
 #import "MacroHeader.h"
+//常用接口文件
+#import "InterfaceHeader.h"

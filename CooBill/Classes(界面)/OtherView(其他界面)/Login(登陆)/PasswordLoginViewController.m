@@ -190,13 +190,13 @@
             UITextField *telField = [self.view viewWithTag:20];
             UITextField *passWordField = [self.view viewWithTag:30];
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-//            if ([telField.text isEqualToString:@"1"] && [passWordField.text isEqualToString:@"1"]) {
-//                KPLog(@"登陆成功");
+            if ([telField.text isEqualToString:@"1"] && [passWordField.text isEqualToString:@"1"]) {
+                KPLog(@"登陆成功");
                 [KPAppDelegate gotoMainView];
-//            }else{
-//                [SHToast showWithText:@"登陆失败" duration:1.0];
-//                KPLog(@"登陆失败");
-//            }
+            }else{
+                [SHToast showWithText:@"登陆失败" duration:1.0];
+                KPLog(@"登陆失败");
+            }
         }
             break;
         case 50://遇到问题
