@@ -176,7 +176,8 @@
         {
             KPLog(@"国家码点击");
             CountryCodeTableViewController *codeView = [[CountryCodeTableViewController alloc]init];
-            KPNavigationController *nav = [[KPNavigationController alloc]initWithRootViewController:codeView];
+//            KPNavigationController *nav = [[KPNavigationController alloc]initWithRootViewController:codeView];
+            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:codeView];
             [self presentViewController:nav animated:YES completion:nil];
         }
             break;
@@ -295,6 +296,7 @@
 #pragma mark - 点击空白
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
+    KPLog(@"点击空白");
     [self.view endEditing:YES];
 }
 

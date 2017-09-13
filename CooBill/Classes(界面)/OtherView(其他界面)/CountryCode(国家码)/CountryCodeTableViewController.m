@@ -7,15 +7,14 @@
 //
 
 #import "CountryCodeTableViewController.h"
-#import "JKRSearchController.h"
-#import "JKRSearchResultViewController.h"
+#import "CountrySearchResultViewController.h"
 
 static NSString *const CellIdentifier = @"WEICHAT_ID";
 
-@interface CountryCodeTableViewController ()<JKRSearchControllerhResultsUpdating,JKRSearchControllerDelegate,JKRSearchBarDelegate>
+@interface CountryCodeTableViewController ()<UISearchControllerDelegate,UISearchBarDelegate,UISearchResultsUpdating>
 
-//搜索界面控制器
-@property (nonatomic, strong) JKRSearchController *searchController;
+//搜索控制器
+@property (nonatomic, strong) UISearchController *searchController;
 //数据源
 @property (nonatomic, strong) NSArray<NSString *> *dataArray;
 
@@ -30,9 +29,9 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
     //设置左上角返回键
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_back" highlightImage:@"nav_back" target:self action:@selector(leftBtnClick)];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.tableView.tableFooterView = [[UIView alloc]init];
     [self.tableView setTableHeaderView:self.searchController.searchBar];
-    self.jkr_lightStatusBar = YES;
+    self.view.backgroundColor = [UIColor lightGrayColor];
 }
 
 #pragma mark - Table view data source
@@ -62,10 +61,10 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
 }
 
 #pragma mark - JKRSearchControllerhResultsUpdating
-- (void)updateSearchResultsForSearchController:(JKRSearchController *)searchController {
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     NSString *searchText = searchController.searchBar.text;
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF CONTAINS %@)", searchText];
-    JKRSearchResultViewController *resultController = (JKRSearchResultViewController *)searchController.searchResultsController;
+    CountrySearchResultViewController *resultController = (CountrySearchResultViewController *)searchController.searchResultsController;
     if (!(searchText.length > 0)){
         resultController.filterDataArray = @[];
     }else{
@@ -73,47 +72,24 @@ static NSString *const CellIdentifier = @"WEICHAT_ID";
     }
 }
 
-#pragma mark - JKRSearchControllerDelegate
-- (void)willPresentSearchController:(JKRSearchController *)searchController {
-    NSLog(@"willPresentSearchController, %@", searchController);
-}
-
-- (void)didPresentSearchController:(JKRSearchController *)searchController {
-    NSLog(@"didPresentSearchController, %@", searchController);
-}
-
-- (void)willDismissSearchController:(JKRSearchController *)searchController {
-    NSLog(@"willDismissSearchController, %@", searchController);
-}
-
-- (void)didDismissSearchController:(JKRSearchController *)searchController {
-    NSLog(@"didDismissSearchController, %@", searchController);
-}
-
-#pragma mark - JKRSearchBarDelegate
-- (void)searchBarTextDidBeginEditing:(JKRSearchBar *)searchBar {
-    NSLog(@"searchBarTextDidBeginEditing %@", searchBar);
-}
-
-- (void)searchBarTextDidEndEditing:(JKRSearchBar *)searchBar {
-    NSLog(@"searchBarTextDidEndEditing %@", searchBar);
-}
-
-- (void)searchBar:(JKRSearchBar *)searchBar textDidChange:(NSString *)searchText {
-    NSLog(@"searchBar:%@ textDidChange:%@", searchBar, searchText);
-}
-
 #pragma mark - 懒加载
 //搜索控制界面
-- (JKRSearchController *)searchController{
+- (UISearchController *)searchController{
     if (!_searchController) {
-        JKRSearchResultViewController *resultSearchController = [[JKRSearchResultViewController alloc]init];
-        _searchController = [[JKRSearchController alloc]initWithSearchResultsController:resultSearchController];
+        CountrySearchResultViewController *resultSearchController = [[CountrySearchResultViewController alloc]init];
+        _searchController = [[UISearchController alloc]initWithSearchResultsController:resultSearchController];
         _searchController.searchBar.placeholder = @"搜索";
         _searchController.hidesNavigationBarDuringPresentation = YES;
         _searchController.searchResultsUpdater = self;
         _searchController.searchBar.delegate = self;
         _searchController.delegate = self;
+        //设置搜索框外层颜色
+        _searchController.searchBar.barTintColor = RGB(228, 228, 228, 0.8);
+        //清楚搜索框黑线
+        UIImageView *barImageView = [[[_searchController.searchBar.subviews firstObject] subviews] firstObject];
+        barImageView.layer.borderColor = RGB(228, 228, 228, 1.0).CGColor;
+        barImageView.layer.borderWidth = 1;
+        _searchController.view.backgroundColor = RGB(222, 222, 222, 0.5);
     }
     return _searchController;
 }

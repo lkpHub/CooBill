@@ -24,5 +24,4 @@
 
 + (NSString *)date:(NSString *)dateTime;
 
-+ (void)sadaasdas;
 @end

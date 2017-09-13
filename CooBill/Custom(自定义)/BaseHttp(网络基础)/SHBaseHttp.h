@@ -56,7 +56,7 @@
  
  @param retryNum 重试次数
  @param url      网址
- @param flie     文件路径
+ @param file     文件路径
  @param progress 进度
  @param success  成功
  @param failure  失败

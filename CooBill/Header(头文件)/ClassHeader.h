@@ -21,10 +21,10 @@
 #import "PublicMethod.h"
 
 
-#import "UIView+JKRTouch.h"
-#import "UIView+JKR_Frame.h"
-#import "UIView+JKRViewController.h"
-#import "UIViewController+JKRStatusBarStyle.h"
+//#import "UIView+JKRTouch.h"
+//#import "UIView+JKR_Frame.h"
+//#import "UIView+JKRViewController.h"
+//#import "UIViewController+JKRStatusBarStyle.h"
 
 #pragma mark - 第三方文件
 //网络请求
